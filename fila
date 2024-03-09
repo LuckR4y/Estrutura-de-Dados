@@ -43,7 +43,7 @@ using namespace std;
 
     bool fila::estacheio() //isfull
     {
-        return (ultimo-primeiro == max_itens);
+        return (ultimo - primeiro == maxItens);
     }
 
     void fila::inserir(TipoItem item) //push //enqueue
@@ -65,7 +65,7 @@ using namespace std;
             return 0;
         } else{
             primeiro++;            
-            return estrutura[(primeiro-1) % max_itens];
+            return estrutura[(primeiro-1) % maxItens];
         }
     }
 
@@ -73,13 +73,14 @@ using namespace std;
     {
         cout << "Fila: [ ";
         for (int i=primeiro ; i<ultimo ; i++){
-            cout << estrutura[i % max_itens] << " ";
+            cout << estrutura[i % maxItens] << " ";
         }
         cout << "]\n";
     }
 
 
-    #include <iostream>
+Main_fila.cpp
+#include <iostream>
 #include "fila.h"
 
 using namespace std;
@@ -89,7 +90,7 @@ int main(){
 	fila fila1;
 	int opcao;
 	TipoItem item;
-	cout <<"PROGRAMA INSERIR IDaDES DOS ALUNOS E FAZER O L\n";
+	cout <<"PROGRAMA INSERIR IDAES DOS ALUNOS E FAZER O L\n";
 	
 	do{
 		cout << "Digite 0 para parar o L!\n";
@@ -109,7 +110,7 @@ int main(){
 		} else if (opcao ==3){
 			fila1.imprimir();
 		} else if (opcao == 4) {
-		<<" Mto bem, seu L foi estupendo!!!!!";
+		cout <<"Mto bem, seu L foi estupendo!!!!!\n";
 	}	
 } while (opcao != 0);
 
